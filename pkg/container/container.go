@@ -7,8 +7,8 @@ import (
 	"strconv"
 	"strings"
 
-	"github.com/containrrr/watchtower/internal/util"
-	wt "github.com/containrrr/watchtower/pkg/types"
+	"github.com/falconnl93/watchtower/internal/util"
+	wt "github.com/falconnl93/watchtower/pkg/types"
 	"github.com/sirupsen/logrus"
 
 	"github.com/docker/docker/api/types"
@@ -334,9 +334,9 @@ func (c Container) GetCreateConfig() *dockercontainer.Config {
 	config.Volumes = util.StructMapSubtract(config.Volumes, imageConfig.Volumes)
 
 	// subtract ports exposed in image from container
-	for k := range config.ExposedPorts {
-		if _, ok := imageConfig.ExposedPorts[k]; ok {
-			delete(config.ExposedPorts, k)
+	for port := range config.ExposedPorts {
+		if _, ok := imageConfig.ExposedPorts[string(port)]; ok {
+			delete(config.ExposedPorts, port)
 		}
 	}
 	for p := range c.containerInfo.HostConfig.PortBindings {

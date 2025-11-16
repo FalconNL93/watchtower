@@ -3,13 +3,13 @@ package actions_test
 import (
 	"time"
 
-	"github.com/containrrr/watchtower/internal/actions"
-	"github.com/containrrr/watchtower/pkg/types"
+	"github.com/falconnl93/watchtower/internal/actions"
+	"github.com/falconnl93/watchtower/pkg/types"
 	dockerTypes "github.com/docker/docker/api/types"
 	dockerContainer "github.com/docker/docker/api/types/container"
 	"github.com/docker/go-connections/nat"
 
-	. "github.com/containrrr/watchtower/internal/actions/mocks"
+	. "github.com/falconnl93/watchtower/internal/actions/mocks"
 	. "github.com/onsi/ginkgo"
 	. "github.com/onsi/gomega"
 )

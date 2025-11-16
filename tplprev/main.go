@@ -7,9 +7,9 @@ import (
 	"fmt"
 	"os"
 
-	"github.com/containrrr/watchtower/internal/meta"
-	"github.com/containrrr/watchtower/pkg/notifications/preview"
-	"github.com/containrrr/watchtower/pkg/notifications/preview/data"
+	"github.com/falconnl93/watchtower/internal/meta"
+	"github.com/falconnl93/watchtower/pkg/notifications/preview"
+	"github.com/falconnl93/watchtower/pkg/notifications/preview/data"
 )
 
 func main() {
